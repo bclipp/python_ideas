@@ -1,4 +1,4 @@
-import modulesa.modulea as ma
+import modulea as ma
 
 
 def main():
