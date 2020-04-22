@@ -9,4 +9,4 @@ def setup_custom_logger():
     :return:
     """
     logging.basicConfig(format='%(asctime)s - %(levelname)s - %(module)s - %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p',
-                        filename='test.log', level=logging.INFO)
+                        filename="{:%Y-%m-%d}.log".format(datetime.now()), level=logging.INFO)
