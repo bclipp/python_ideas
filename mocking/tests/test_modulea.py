@@ -1,8 +1,6 @@
-
-import modulea
+# from app import modulea
 from unittest.mock import patch
-from time import sleep
-
+import app.modulea as modulea
 
 # stub
 @patch("modulea.time.sleep")
