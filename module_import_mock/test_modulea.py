@@ -13,9 +13,9 @@ def test_module_stub(mock_time):
 # mock
 @patch("modulea.time")
 def test_modulea_1(mock_time):
-    mock_time.get.side_effect = sleep
+    # mock_time.get.side_effect = sleep
     modulea.do_something()
-    assert mock_time.get.call_count == 0
+    assert mock_time.get.call_count == 5
 
 #from mock import Mock
 #mock = Mock()
