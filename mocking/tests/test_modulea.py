@@ -1,7 +1,8 @@
 # from app import modulea
 from unittest.mock import patch
 import app.modulea as modulea
-
+from time import sleep
+# patching
 # stub
 @patch("modulea.time.sleep")
 def test_module_stub(mock_time):
@@ -10,11 +11,15 @@ def test_module_stub(mock_time):
 
 # mock
 @patch("modulea.time")
-def test_modulea_1(mock_time):
-    # mock_time.get.side_effect = sleep
+def test_modulea_sleep(mock_time):
+    mock_time.sleep.side_effect = sleep
     modulea.do_something()
-    assert mock_time.get.call_count == 5
+    assert mock_time.sleep.call_count == 5
 
-#from mock import Mock
-#mock = Mock()
-#print mock.call_count
+# mock
+@patch("modulea.time.sleep")
+def test_modulea_time(mock_time):
+    modulea.mycode()
+    assert mock_time.call_count == 5
+
+# using mock object
