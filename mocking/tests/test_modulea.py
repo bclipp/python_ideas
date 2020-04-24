@@ -19,7 +19,7 @@ def test_modulea_sleep(mock_time):
 # mock
 @patch("modulea.time.sleep")
 def test_modulea_time(mock_time):
-    modulea.mycode()
+    modulea.do_something()
     assert mock_time.call_count == 5
 
 # using mock object
